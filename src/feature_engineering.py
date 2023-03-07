@@ -119,8 +119,8 @@ def evaluate(y_true, y_pred):
         recall = 100*confusion_matrix["true_positive"] / (
             confusion_matrix["true_positive"] + confusion_matrix["false_negative"])
 
-    print(f"Confusion Matrix: {confusion_matrix} %")
-    print(f"Accuracy: {accuracy} %")
-    print(f"Precision: {precision} %")
+    print(f"Confusion Matrix: {confusion_matrix}")
+    print(f"Accuracy: {accuracy}%")
+    print(f"Precision: {precision}%")
     print(f"Recall: {recall}%")
     return
