@@ -123,4 +123,4 @@ def evaluate(y_true, y_pred):
     print(f"Accuracy: {accuracy}%")
     print(f"Precision: {precision}%")
     print(f"Recall: {recall}%")
-    return
+    return accuracy
