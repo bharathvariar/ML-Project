@@ -76,7 +76,7 @@ def train_test_split(df, train_size=0.67, shuffle=True, random_state=42):
     return X_train, X_test, y_train, y_test
 
 
-def evaluate(y_true, y_pred):
+def evaluate(y_true, y_pred, verbose = True):
     """
     Computes and prints the confusion matrix, accuracy, precision, and recall
     for a given set of true and predicted target values.
@@ -118,9 +118,9 @@ def evaluate(y_true, y_pred):
     else:
         recall = 100*confusion_matrix["true_positive"] / (
             confusion_matrix["true_positive"] + confusion_matrix["false_negative"])
-
-    print(f"Confusion Matrix: {confusion_matrix}")
-    print(f"Accuracy: {accuracy}%")
-    print(f"Precision: {precision}%")
-    print(f"Recall: {recall}%")
+    if (verbose == True):
+        print(f"Confusion Matrix: {confusion_matrix}")
+        print(f"Accuracy: {accuracy}%")
+        print(f"Precision: {precision}%")
+        print(f"Recall: {recall}%")
     return accuracy
